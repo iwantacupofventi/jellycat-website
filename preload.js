@@ -1,5 +1,3 @@
-preload();
-
 const paths = [];
 
 for (let i = 1; i <=7; i++) {
@@ -23,6 +21,8 @@ paths.push('graphics/jelly_ribbon.png');
 
 paths.push('graphics/transition.gif');
 
+preload();
+
 function preload() {
   console.log('preloading');
   paths.forEach((path) => {
@@ -31,3 +31,4 @@ function preload() {
   });
   console.log('preload complete!');
 }
+

@@ -41,7 +41,7 @@ function switchCharacter(char) {
       } else if (char.ribbon === true) {
         document.querySelector('.js-ribbon-overlay').src = `graphics/${char.name}_ribbon.png`;
       }
-    }, 1400)
+    }, 1500)
     // setTimeout(() => {
     //   char.kissAnimation();
     // }, 2000)
