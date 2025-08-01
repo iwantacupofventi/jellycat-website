@@ -1,5 +1,6 @@
 let CHARACTER = jelly;
 let ANIMATING = false;
+let TRANSITIONING = false;
 
 document.querySelector('.js-butter-icon').addEventListener('click', () => {
   switchCharacter(butter);
@@ -29,9 +30,10 @@ document.querySelector('.js-hamburger-menu').addEventListener('click', () => {
 
 
 function switchCharacter(char) {
-    if (!ANIMATING && CHARACTER !== char) {
+  if (!ANIMATING && !TRANSITIONING && CHARACTER !== char) {
     document.querySelector('.js-dropdown-menu').style.display = 'none';
-    CHARACTER.transition();
+    transition();
+
     setTimeout(() => {
       CHARACTER = char;
       char.renderImage();
@@ -48,3 +50,18 @@ function switchCharacter(char) {
   }
 }
 
+  function transition() {
+    TRANSITIONING = true;
+
+    const gif = document.querySelector('.js-transition-gif');
+    const container = document.querySelector('.transition');
+    gif.offsetHeight;
+    gif.src = `graphics/transition.gif?cb=${Date.now()}`;
+    container.style.display = 'flex';
+
+    setTimeout(() => {
+      container.style.display = "none";
+      gif.src = "";
+      TRANSITIONING = false;
+    }, 3330);
+  }

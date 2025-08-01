@@ -64,22 +64,10 @@ class Jellycat {
         }
         heartBarHTML.src = `graphics/heart/heart_animation_${i}.jpeg`;
         i += 1;
-      }, 120);
+      }, 100);
 
       this.heartBar = 'FULL';
     }
-  }
-
-  transition() {
-    const gif = document.querySelector('.js-transition-gif');
-    const container = document.querySelector('.transition');
-    gif.offsetHeight;
-    gif.src = `graphics/transition.gif`;
-    container.style.display = 'flex';
-    setTimeout(() => {
-      container.style.display = "none";
-      gif.src = "";
-    }, 3330);
   }
 
   switchTheme() {

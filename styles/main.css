@@ -9,6 +9,6 @@
   cursor: url(../cursors/Sélection\ normale.cur), auto;
 }
 
-button, .interact-button, .js-hamburger-menu, .heart-button, .ribbon-button {
+button, .interact-button, .js-hamburger-menu, .heart-button, .ribbon-button, .jellycat-icon-img {
   cursor: url(../cursors/Sélection\ de\ lien.cur), pointer;
 }
