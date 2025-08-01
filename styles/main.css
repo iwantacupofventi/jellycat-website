@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'BloomingFlowers';
+  src: url('../fonts/BloomingFlowers.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  cursor: url(../cursors/Sélection\ normale.cur), auto;
+}
+
+button, .interact-button, .js-hamburger-menu, .heart-button, .ribbon-button {
+  cursor: url(../cursors/Sélection\ de\ lien.cur), pointer;
+}

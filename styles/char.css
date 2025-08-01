@@ -1,0 +1,157 @@
+:root {
+  --bg-color: lavenderblush;
+  --alt-color: pink;
+  --text-color: rgb(60, 60, 60);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'BloomingFlowers', "Josefin Sans", sans-serif, Arial;
+}
+
+.header {
+  height: 75px;
+  background-color: var(--alt-color);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.title {
+  font-size: 30px;
+  color: var(--text-color);
+  padding-left: 40px;
+}
+
+.hamburger-menu {
+  width: 40px;
+  margin-left: auto;
+  padding-right: 79px;
+  /* cursor: pointer; */
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 250px 1fr;
+  margin-top: 140px;
+}
+
+.jellycat-img {
+  width: 380px;
+}
+
+.jellycat-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ribbon-overlay {
+  position: absolute;
+  width: 380px;
+}
+
+.left-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-bar {
+  height: 420px;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.interact-button {
+  background-color: var(--alt-color);
+  border: solid;
+  border-color: black;
+  border-radius: 40px;
+  padding: 12px 15px;
+  text-align: center;
+  margin: 10px;
+}
+
+.heart-button, .ribbon-button {
+  width: 50px;
+  height: 50px;
+}
+
+.interact-button:active {
+  opacity: 0.5;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 75px;
+  right: 0px;
+  background-color: var(--alt-color);
+  width: 200px;
+  display: none;
+  max-height: calc(100vh - 75px);
+  overflow-y: auto;
+}
+
+.jellycat-icon {
+  display: block;
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  overflow: hidden;
+  /* background-color: white; */
+  font-family: 'BloomingFlowers';
+}
+
+.jellycat-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* display: block; */
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  background-color: var(--alt-color); 
+  width: 14px;
+  /* border-radius: 20px;
+  border: 2px solid mistyrose; */
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: var(--bg-color);
+  border-radius: 20px;
+}
+
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.transition-gif {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
