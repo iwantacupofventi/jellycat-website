@@ -16,19 +16,19 @@ class Jellycat {
 
     const myInterval = setInterval(() => {    
       if (i > this.frames) {
-        document.querySelector('.js-jellycat-img').src = `../graphics/${this.name}.jpeg`
+        document.querySelector('.js-jellycat-img').src = `/graphics/${this.name}.jpeg`
         clearInterval(myInterval);
         ANIMATING = false;
         return;
       }
-      document.querySelector('.js-jellycat-img').src = `../graphics/kiss/${this.name}_kiss_${i}.jpeg`
+      document.querySelector('.js-jellycat-img').src = `/graphics/kiss/${this.name}_kiss_${i}.jpeg`
       i += 1;
     }, 140);
   }
 
   toggleRibbon() {
     if (this.ribbon === false) {
-      document.querySelector('.js-ribbon-overlay').src = `../graphics/${this.name}_ribbon.png`;
+      document.querySelector('.js-ribbon-overlay').src = `/graphics/${this.name}_ribbon.png`;
       this.increaseHeart();
       this.ribbon = true;
       if (!ANIMATING) {
@@ -41,14 +41,14 @@ class Jellycat {
   }
 
   renderImage() {
-    document.querySelector('.js-jellycat-img').src = `../graphics/${this.name}.jpeg`;
-    document.querySelector('.js-heart-bar').src = `../graphics/heart/heart_bar_${this.heartBar}.jpeg`;
+    document.querySelector('.js-jellycat-img').src = `/graphics/${this.name}.jpeg`;
+    document.querySelector('.js-heart-bar').src = `/graphics/heart/heart_bar_${this.heartBar}.jpeg`;
   }
 
   increaseHeart() {
     const heartBarHTML = document.querySelector('.js-heart-bar');
     if (this.heartBar === 'EMPTY') {
-      heartBarHTML.src = '../graphics/heart/heart_bar_1.jpeg'
+      heartBarHTML.src = '/graphics/heart/heart_bar_1.jpeg'
       this.heartBar = 1;
     } else if (this.heartBar < 7 && this.heartBar >= 1) {
       this.heartBar += 1;
@@ -58,11 +58,11 @@ class Jellycat {
 
       const myInterval = setInterval(() => {
         if (i > 7) {
-          heartBarHTML.src = '../graphics/heart/heart_bar_FULL.jpeg';
+          heartBarHTML.src = '/graphics/heart/heart_bar_FULL.jpeg';
           clearInterval(myInterval);
           return;
         }
-        heartBarHTML.src = `../graphics/heart/heart_animation_${i}.jpeg`;
+        heartBarHTML.src = `/graphics/heart/heart_animation_${i}.jpeg`;
         i += 1;
       }, 120);
 
@@ -74,7 +74,7 @@ class Jellycat {
     const gif = document.querySelector('.js-transition-gif');
     const container = document.querySelector('.transition');
     gif.offsetHeight;
-    gif.src = `../graphics/transition.gif`;
+    gif.src = `/graphics/transition.gif`;
     container.style.display = 'flex';
     setTimeout(() => {
       container.style.display = "none";
