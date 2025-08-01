@@ -1,3 +1,5 @@
+preload();
+
 const paths = [];
 
 for (let i = 1; i <=7; i++) {
@@ -22,12 +24,10 @@ paths.push('graphics/jelly_ribbon.png');
 paths.push('graphics/transition.gif');
 
 function preload() {
-  // console.log('preloading');
+  console.log('preloading');
   paths.forEach((path) => {
     const img = new Image();
     img.src = path;
   });
-  // console.log('preload complete!');
+  console.log('preload complete!');
 }
-
-preload();
