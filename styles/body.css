@@ -1,42 +1,3 @@
-:root {
-  --bg-color: lavenderblush;
-  --alt-color: pink;
-  --text-color: rgb(60, 60, 60);
-}
-
-body {
-  background-color: var(--bg-color);
-  font-family: 'BloomingFlowers', "Josefin Sans", sans-serif, Arial;
-}
-
-.header {
-  height: 75px;
-  background-color: var(--alt-color);
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 100;
-}
-
-.title {
-  font-size: 30px;
-  color: var(--text-color);
-  padding-left: 40px;
-}
-
-.hamburger-menu {
-  width: 40px;
-  margin-left: auto;
-  padding-right: 79px;
-  /* cursor: pointer; */
-}
-
 .main {
   display: grid;
   grid-template-columns: 1fr 250px 1fr;
@@ -119,10 +80,18 @@ body {
 }
 
 .jellycat-icon-img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
   /* display: block; */
+}
+
+.jellycat-namecard {
+  position: absolute;
+  bottom: 12px;
+  left: 140px;
+  height: 150px;
 }
 
 .dropdown-menu::-webkit-scrollbar {

@@ -12,3 +12,42 @@
 button, .interact-button, .js-hamburger-menu, .heart-button, .ribbon-button, .jellycat-icon-img {
   cursor: url(../cursors/Sélection\ de\ lien.cur), pointer;
 }
+
+:root {
+  --bg-color: lavenderblush;
+  --alt-color: pink;
+  --text-color: rgb(60, 60, 60);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'BloomingFlowers', "Josefin Sans", sans-serif, Arial;
+}
+
+.header {
+  height: 75px;
+  background-color: var(--alt-color);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.title {
+  font-size: 30px;
+  color: var(--text-color);
+  padding-left: 40px;
+}
+
+.hamburger-menu {
+  width: 40px;
+  margin-left: auto;
+  padding-right: 79px;
+  /* cursor: pointer; */
+}

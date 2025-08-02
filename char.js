@@ -43,6 +43,7 @@ class Jellycat {
   renderImage() {
     document.querySelector('.js-jellycat-img').src = `graphics/${this.name}.jpeg`;
     document.querySelector('.js-heart-bar').src = `graphics/heart/heart_bar_${this.heartBar}.jpeg`;
+    document.querySelector('.js-jellycat-namecard').src = `graphics/${this.name}_namecard.png`;
   }
 
   increaseHeart() {

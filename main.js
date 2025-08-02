@@ -50,18 +50,18 @@ function switchCharacter(char) {
   }
 }
 
-  function transition() {
-    TRANSITIONING = true;
+function transition() {
+  TRANSITIONING = true;
 
-    const gif = document.querySelector('.js-transition-gif');
-    const container = document.querySelector('.transition');
-    gif.offsetHeight;
-    gif.src = `graphics/transition.gif?cb=${Date.now()}`;
-    container.style.display = 'flex';
+  const gif = document.querySelector('.js-transition-gif');
+  const container = document.querySelector('.transition');
+  gif.offsetHeight;
+  gif.src = `graphics/transition.gif?cb=${Date.now()}`;
+  container.style.display = 'flex';
 
-    setTimeout(() => {
-      container.style.display = "none";
-      gif.src = "";
-      TRANSITIONING = false;
-    }, 3330);
-  }
+  setTimeout(() => {
+    container.style.display = "none";
+    gif.src = "";
+    TRANSITIONING = false;
+  }, 3330);
+}
